@@ -15,7 +15,7 @@ public static void main (String arge[]) throws InterruptedException
     System.out.println("Loaded Initial Page Title: " + driver.getTitle());
     
     // wait system selenium stop for seconds
-    // 1 sec = 1000 milisection
+    // 1 sec = 1000 miliseconds
     Thread.sleep(2000); //---2 sec wait
 
     // 2. Navigate to a completely different webpage
