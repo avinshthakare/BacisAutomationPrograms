@@ -46,7 +46,7 @@ public class AllPopupHandle {
 		System.out.println(driver.findElement(By.xpath("//div[@id='output']")).getText());				
 
 
-		// Confirmation Alert Popup dismiss action
+		// Promt alert popup accept action
 		Thread.sleep(2000);
 		WebElement alert_btn3 = driver.findElement(By.xpath("//button[@id='promptBox']"));
 		alert_btn3.click();
