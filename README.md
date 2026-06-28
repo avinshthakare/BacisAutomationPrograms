@@ -21,3 +21,10 @@ Demo Website:
 10- https://www.hyrtutorials.com/
 
 11-https://www.dezlearn.com/explicit-wait-example/
+
+=====================================================================================
+
+project 1 https://demowebshop.tricentis.com/
+
+Project 2 https://parabank.parasoft.com/parabank/index.htm
+
