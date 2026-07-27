@@ -16,28 +16,13 @@ public class XpathOperators {
 		
 		// handlin Dynamic WebElement using (and , or) Operator
 		
+		for (int i=0;i<=10;i++) {
 		
-		driver.findElement(By.xpath("//button[@name=\"start\" or @name = \"stop\" ]")).click();
+	//	driver.findElement(By.xpath("//button[@name=\"start\" or @name = \"stop\" ]")).click();
+		driver.findElement(By.cssSelector("[class=start],[class=stop]")).click();
+		Thread.sleep(100);
 		
-		Thread.sleep(3000);
-		
-		//both above and below xpath is same, just use "and" operator for showcase 
-		
-		driver.findElement(By.xpath("//button[@name=\"start\" or @name = \"stop\" and  @onclick=\"toggleButton(this)\" ]")).click();
-		
-		Thread.sleep(3000);
-		
-		// handlin Dynamic WebElement using Operator(and , or) and text Function
-		
-	
-		
-		driver.findElement(By.xpath("//button[text()=\"START\" or text() = \"STOP\" ]")).click();
-		
-		Thread.sleep(3000);
-		
-		driver.findElement(By.xpath("//button[text()=\"START\" or text() = \"STOP\" ]")).click();
-		
-		Thread.sleep(3000);
+		}
 		
 		driver.close();
 		

@@ -3,6 +3,8 @@ package screenshot;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -43,11 +45,15 @@ public static void main(String args[]) throws InterruptedException, IOException
 
 static void TekesSS(WebDriver driver, String filename) throws IOException
 {
-	
+	LocalDateTime myDateObj = LocalDateTime.now();
+    DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MMM-yyyy HH-mm-ss");
+
+    String formattedDate = myDateObj.format(myFormatObj);
+    
 
 	TakesScreenshot ts = (TakesScreenshot)driver;
 	File scr = ts.getScreenshotAs(OutputType.FILE);
-	File dest =new File("C:\\Users\\marsh\\OneDrive\\Desktop\\"+filename+".png");
+	File dest =new File("C:\\Users\\marsh\\OneDrive\\Desktop\\"+filename+"-"+formattedDate+".png");
 	
 	FileHandler.copy(scr, dest);
 
