@@ -18,6 +18,7 @@ public class XpathOperators {
 		
 		for (int i=0;i<=10;i++) {
 		
+			
 	//	driver.findElement(By.xpath("//button[@name=\"start\" or @name = \"stop\" ]")).click();
 		driver.findElement(By.cssSelector("[class=start],[class=stop]")).click();
 		Thread.sleep(100);
